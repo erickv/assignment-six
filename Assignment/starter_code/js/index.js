@@ -1,30 +1,24 @@
 $(document).ready(function(){
-	$("form").submit(changeCity)
 
-// var cityName = ["NYC", "SF", "LA", "ATX", "SYD"];
-// var index:
-// for(index = 0; index < cities.lenght; index = index+1){
-//   console.log(cities(index));
-//   $("select").append("<option>" + cities(index)+"</option>");
-// }
+$("form").submit(changeCity)
 
-
-
-
+// creates the UI
+var cities = ["NYC", "SF", "LA", "ATX", "SYD"];
+var index;
+for(index = 0; index < cities.length; index = index+1){
+  console.log(cities(index));
+  $("select").append("<option>" + cities(index)+"</option>");
+}
 
 	// user submits a city name
 	function changeCity(){
 		event.preventDefault();
 		var city = $("#city-type").val();
-    var cityName = ["NYC", "SF", "LA", "ATX", "SYD"];
-var index:
-for(index = 0; index < cities.lenght; index = index+1){
-  console.log(cities(index));
-  $("select").append("<option>" + cities(index)+"</option>");
-}
+
 
 		 if (city == "New York" || city == "NYC" || city =="New York City") {
     $("body").attr("class", "nyc");
+  }
 
 // }
 	// if any of these cities is selected nyc, sf, la, austin, sydney
@@ -50,4 +44,4 @@ else {
 
 }
 
-};
+});
